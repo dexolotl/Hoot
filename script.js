@@ -13,13 +13,12 @@ $( document ).ready(function() {
                         //var returner = splitter(start, i, j, text);
                         //text = returner[0] + "<span>" + returner[1] + "</span>" + returner[2];
                         //start = j;
-                        console.log(i, j);
+                        console.log(i + " " + j + " " + splitter(start,i,j,text));
                         break;
                     }
                 }
             }
         }
-        return text;
     }
        
     function splitter(start, i, j, text) {
