@@ -12,6 +12,7 @@ $( document ).ready(function() {
                     if (text.charAt(j) == ">") {
                         var returner = splitter(i, j, text);
                         text = returner[0] + "<span>" + returner[1] + "</span>" + returner[2];
+                        return text;
                     }
                 }
             }
