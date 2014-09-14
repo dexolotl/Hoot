@@ -1,4 +1,4 @@
-Hoot
+Hoot - Better code: Together
 ====
 Online collaborative code creation tool
 
