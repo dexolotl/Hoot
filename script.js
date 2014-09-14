@@ -14,7 +14,7 @@ $( document ).ready(function() {
                         //var returner = splitter(start, i, j, text);
                         //text = returner[0] + "<span>" + returner[1] + "</span>" + returner[2];
                         //start = j;
-                        highlighted += (i + " " + j + " " + splitter(start,i,j,text) + "\n");
+                        highlighted += (i + " " + j + "|" + splitter(start,i,j,text)[0] + "<span>" + splitter(start,i,j,text)[1] + "</span>" + splitter(start,i,j,text)[2] + "\n");
                         break;
                     }
                 }
