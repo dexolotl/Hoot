@@ -7,9 +7,10 @@ $( document ).ready(function() {
 			if (text.charAt(i) == "<") {
 				for (j = i; j < text.length; j++) {
 					if (text.charAt(j) == ">") {
-						console.log(splitter(i,j,lastTagEnd, text)[0]);
-						console.log(splitter(i,j,lastTagEnd, text)[1]);
-						console.log(splitter(i,j,lastTagEnd, text)[2]);
+
+						var tagText = splitter(i, j, lastTagEnd, text)
+						$("#editor").val(tagText[0] + "<span>" + tagText[1] + "</span>" + tagText[2]);
+
 						lastTagEnd = j;
 						break;
 					}
