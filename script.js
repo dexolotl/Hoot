@@ -2,19 +2,16 @@ $( document ).ready(function() {
     //newline counts as a char
     $("#editor").keyup(function() {
         var text = $("#editor").text();
-        console.log(highlight(text));
+        $("#editor").html(highlight(text));
     });
     var start = 0; 
     function highlight(text) {
-        var highlighted = "";
+        var highlighted = text;
         for (i = 0; i < text.length; i++) {
             if (text.charAt(i) == "<") {
                 for (j = i; j < text.length; j++) {
                     if (text.charAt(j) == ">") {
-                        //var returner = splitter(start, i, j, text);
-                        //text = returner[0] + "<span>" + returner[1] + "</span>" + returner[2];
-                        //start = j;
-                        highlighted += (i + " " + j + "|" + splitter(start,i,j,text)[0] + "<span>" + splitter(start,i,j,text)[1] + "</span>" + splitter(start,i,j,text)[2] + "\n");
+                        highlighted = (splitter(start,i,j,text)[0] + "<span>" + splitter(start,i,j,text)[1] + "</span>" + splitter(start,i,j,text)[2] + "\n");
                         break;
                     }
                 }
