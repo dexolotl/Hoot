@@ -4,14 +4,60 @@
 	<meta charset="UTF-8">
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="script.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<title>Hoot</title>
-	<style>
-		span {
-			color: #f00;
-		}
-	</style>
+		
+		<style>
+			
+			.home{
+				background-color: #FCF5EF;
+
+			}
+			span {
+				color: #f00;
+			}
+			#editor{
+				left : 200px;
+				font-family: consolas;
+				font-size: 14pt; 
+				margin-left: 100px;
+				margin-top: 100px;
+				margin-right: 100px;
+				background-color: #4c4c4c;
+				bottom: 200px;
+				resize:vertical;
+    			overflow:auto;
+    			height:500px;
+    			border: 10px solid ;
+    			border-color: #4c4c4c ;
+			}
+			#title{
+				font-family: Opificio Neue;
+				font-size: 60pt;
+				text-align: center;
+				font-style: bold;
+				margin-top: 20px;
+				letter-spacing: 35px;
+			}
+		
+		</style>
 </head>
+<<<<<<< HEAD
 <body>
 	<div id="editor" contenteditable="true">testme</div>
+=======
+<body class="home">
+	<div id="title">
+		|Hoot|
+	</div>	
+	<div id="editor" contenteditable="true" style="color:#ffffff;" >
+		exampleCode
+		<div>
+			test
+		</div>
+	</div>
+>>>>>>> 3da6a46bcddf2de6fbea2e842d23577ef2ced1cd
 </body>
 </html>
+
+
