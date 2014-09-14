@@ -10,9 +10,11 @@ $( document ).ready(function() {
             if (text.charAt(i) == "<") {
                 for (j = i; j < text.length; j++) {
                     if (text.charAt(j) == ">") {
-                        var returner = splitter(start, i, j, text);
-                        text = returner[0] + "<span>" + returner[1] + "</span>" + returner[2];
-                        start = j;
+                        //var returner = splitter(start, i, j, text);
+                        //text = returner[0] + "<span>" + returner[1] + "</span>" + returner[2];
+                        //start = j;
+                        console.log(i, j);
+                        break;
                     }
                 }
             }
