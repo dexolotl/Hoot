@@ -1,22 +1,25 @@
 $( document ).ready(function() {
 	//newline counts as a char
 	$("#editor").keyup(function() {
-		var text = $("#editor").val();
+		var text = $("#editor").text();
 		var lastTagEnd = 0;
 		for (i = 0; i < text.length; i++) {
 			if (text.charAt(i) == "<") {
 				for (j = i; j < text.length; j++) {
 					if (text.charAt(j) == ">") {
 
-						var tagText = splitter(i, j, lastTagEnd, text)
-						$("#editor").val(tagText[0] + "<span>" + tagText[1] + "</span>" + tagText[2]);
+						var tagText = splitter(i, j, lastTagEnd, text);
+						$("#editor").text("");
+						$("#editor").append("<div>" + tagText[0] + "</div>");
+						$("#editor").append("<span>" + tagText[1] + "</span>");
+						$("#editor").append("<div>" + tagText[2] + "</div>");
 
 						lastTagEnd = j;
 						break;
 					}
 				}
-				//splitter(i, j, lastTagEnd, text);
-				//lastTagEnd = j;
+				splitter(i, j, lastTagEnd, text);
+				lastTagEnd = j;
 			}
 		}
 	});
